@@ -17,17 +17,33 @@ html.dark {
 }
 
 
-.d {
-  height: 550px;
+.intro {
+  height: 100vh;
   width: 100%;
-  background-image: url('../public/kaido1.jpeg');
+  background-image: url('../public/hero.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  position: static;
   overflow: hidden;
-  
-  
+}
+
+.intro::after {
+  content: "";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  z-index: -1;
+  background-color: rgba(17 ,24 ,39 , 0.6);
+}
+
+.red-gradient {
+  background: linear-gradient(92deg, #ff5956 2.87%, #ee1e38 96.18%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 

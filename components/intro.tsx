@@ -27,9 +27,10 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className=" intro mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
+      className=" intro  p-28 relative text-center
+       "
     >
-      <div className="flex items-center justify-center">
+      <div className="flex items-center z-10 justify-center">
         <div className="relative">
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
@@ -39,7 +40,7 @@ export default function Intro() {
               duration: 0.2,
             }}
           >
-            <div className="relative mt-10" >
+            <div className="relative mt-10 z-10" >
               <Image
                 src={profilePic}
                 alt="Ricardo portrait"
@@ -63,7 +64,7 @@ export default function Intro() {
           </motion.div>
 
           <motion.span
-            className="absolute bottom-0 right-0 text-4xl"
+            className="absolute bottom-0 right-0 text-4xl z-10"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
@@ -79,21 +80,19 @@ export default function Intro() {
       </div>
 
       <motion.h1
-        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
+        className="mb-10 mt-4 z-10 px-4 text-2xl max-w-[50rem]
+         mx-auto text-center font-medium text-black !leading-[1.5] sm:text-4xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
         <span className="font-bold">Hello, I'm Amir SF.</span> I'm a{" "}
         <span className="font-bold">full-stack developer</span> with{" "}
         <span className="font-bold">4 years</span> of experience.
-        I enjoy
-        building <span className="italic">sites & apps</span>.
-        My focus is{" "}
-        <span className="underline">Angular, .NET</span>.
+
       </motion.h1>
 
       <motion.div
-        className="flex mb-2 flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
+        className="flex mb-2 z-20 flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -102,7 +101,9 @@ export default function Intro() {
       >
         <Link
           href="#contact"
-          className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+          className="group bg-gray-900 text-white px-7 py-3 flex
+           items-center gap-2 rounded-full outline-none focus:scale-110
+            hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
           onClick={() => {
             setActiveSection("Contact");
             setTimeOfLastClick(Date.now());
@@ -112,18 +113,22 @@ export default function Intro() {
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
         <a
-          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
+          className="group bg-white px-7 py-3 flex items-center gap-
+           rounded-full outline-none focus:scale-110 hover:scale-110 
+           active:scale-105 transition cursor-pointer borderBlack text-gray-700
+            "
           href="/CV.pdf"
           download
         >
           Download CV{" "}
-          <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
+          <HiDownload className="opacity-60 group-hover:translate-y-1 text-gray-700 transition" />
         </a>
 
       </motion.div>
 
       <motion.div
-        className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
+        className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 
+        text-lg font-medium"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -133,7 +138,9 @@ export default function Intro() {
 
 
         <a
-          className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          className="bg-white p-4 text-gray-700 hover:text-gray-950 
+          flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] 
+          active:scale-105 transition cursor-pointer borderBlack  "
           href="https://www.linkedin.com/in/amir-souaf-31232b264/"
           target="_blank"
         >
@@ -141,7 +148,7 @@ export default function Intro() {
         </a>
 
         <a
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack  "
           href="https://github.com/AmlrSF"
           target="_blank"
         >
@@ -149,7 +156,7 @@ export default function Intro() {
         </a>
 
         <a
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack  "
           target="_blank"
           onClick={handleCopyUsername}
 
@@ -158,14 +165,14 @@ export default function Intro() {
           {showTooltip ? "copied" : <BsDiscord />}
         </a>
         <a
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack  "
           href="https://x.com/AmlrSF"
           target="_blank"
         >
           <BsTwitter />
         </a>
         <a
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack  "
           href="https://www.youtube.com/@code-minds905"
           target="_blank"
         >
